@@ -80,7 +80,7 @@ nav ul{
 
 nav ul li{
 	float: left;
-	width: 14.28%;
+	width: 25%;
 	text-align: center;
 	position: relative;
 }
@@ -152,7 +152,7 @@ header {
 #mainHeader{
   display : flex;
   flex-direction : row;
-  justify-content : space-between;
+  justify-content : center;
   width :100%;
 }
 
@@ -180,6 +180,16 @@ header {
 	width: 17%;
 }
 
+#banner h1{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size : 2.5em;
+	text-align: center;
+  font-weight: normal;
+  font-style : normal;
+  color: var(--page-color);
+}
+
 .indexBanner img{
 	display: block;
 	margin: auto;
@@ -187,20 +197,19 @@ header {
 	margin-top:20px;
 	margin-left: 60px;
 	margin-right: 60px;
-	
-
-
 }
+
+
 
 
 /* Main text styles*/
 .mainText{
 	font-family:Arial, 'Source Serif Pro', Arial, sans-serif;
-  	text-align: justify;
+  text-align: justify;
 	flex-direction: column;
 	margin-top: 35px;
-	margin-left: 60px;
-	margin-right: 60px;
+	margin-left: 80px;
+	margin-right: 80px;
 }
 
 .mainText hr{
@@ -287,7 +296,7 @@ header {
 
 #titleNews{
 	font-weight:bold;
-  	font-style : normal;
+  font-style : normal;
 	font-size: 1.75em;
 	border-bottom: 2px ;
 	line-height: 1.4em;
@@ -321,9 +330,9 @@ header {
 
 .wrapper{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 20px;
-	grid-row-gap: 1em;
+	grid-row-gap: 30px;
 }
 
 .newsArticle{
@@ -331,14 +340,12 @@ header {
 	border-right: 1px dashed var(--hover-color2);
 	border-left: 1px dashed var(--hover-color2);
 	border-bottom: 1px dashed var(--hover-color2);
-	padding: 15px 30px 15px 30px;
 	background-color: var(--page-color);
 }
 
 .newsArticle img{
 	display: block;
 	margin: auto;
-	margin-top: 20px;
 }
 
 .newsArticle iframe{
