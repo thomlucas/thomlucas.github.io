@@ -262,7 +262,6 @@ border-radius: 8px;
 }
 
 .descriptionCV h1{
-	margin-left: 60px;
 	font-weight:bold;
   font-style : italic;
 	font-size: 1.75em;
@@ -283,7 +282,6 @@ border-radius: 8px;
 }
 
 .descriptionCV h3{
-	margin-left: 60px;
 	font-weight: lighter;
   font-style: italic;
 	font-size: 1em;
