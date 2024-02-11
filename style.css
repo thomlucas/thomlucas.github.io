@@ -61,6 +61,7 @@ nav{
 	background-color: var(--page-color) ;
 	position: sticky;
 	top :0px;
+	z-index: 1
 }
 
 nav ul{
@@ -270,7 +271,6 @@ header {
 }
 
 .descriptionArticle img{
-heigth: auto;
 display: block;
 margin-right: 30px;
 border-radius: 8px;
