@@ -95,6 +95,19 @@ nav a:hover{
 	border-bottom: 1px solid var(--button-color);
 }
 
+.sitename{
+	float: left;
+	width: 20%;
+	text-align: center;
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: var(--page-color);
+	background-color: var(--text-color) ;
+	border-bottom: 1px solid var(--text-color);
+	padding: 15px 0px;
+}
+
 .conteneur{
   margin: 0px 20px;
   height: 1500px;
