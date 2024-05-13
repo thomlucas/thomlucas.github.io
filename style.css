@@ -87,6 +87,7 @@ nav a{
 	text-decoration: none;
 	color: var(--text-color);
 	border-bottom: 1px solid var(--text-color);
+	border-top: 1px solid var(--text-color);
 	padding: 15px 0px;
 }
 
@@ -143,6 +144,12 @@ nav > ul li:hover .sous{
 	border-bottom: 1px solid var(--button-color);
 }
 
+ .subnavText{
+ 	margin-top: 20px;
+ 	text-align: center;
+ 	font-style: italic;
+ }
+
 /* Header styles */
 header {
   display : flex;
@@ -150,7 +157,7 @@ header {
   justify-content : space-between;
   flex-wrap: wrap;
   width :100%;
-  background-color: var(--text-color);
+  /*background-color: var(--text-color); */
 }
 
 #mainHeader{
@@ -169,7 +176,7 @@ header {
 	margin: auto;
 	margin-bottom: 0px;
 	margin-top: 0px;
-	width: 30%;
+	width: 250px;
 }
 
 #banner h1{
@@ -223,6 +230,7 @@ header {
 .descriptionArticle img{
 display: block;
 margin-right: 30px;
+margin-left: 30px;
 border-radius: 8px;
 }
 
@@ -234,7 +242,7 @@ border-radius: 8px;
 }
 
 .descriptionArticle h1{
-	margin-left: 60px;
+	margin-left: 30px;
 	font-weight:bold;
   font-style : italic;
 	font-size: 1.75em;
@@ -255,7 +263,7 @@ border-radius: 8px;
 }
 
 .descriptionArticle h3{
-	margin-left: 60px;
+	margin-left: 30px;
 	font-weight: lighter;
   font-style: italic;
 	font-size: 1em;
@@ -316,7 +324,7 @@ border-radius: 8px;
 
 .descriptionCV ul{
 	margin-top: 5px;
-	list-style-type: circle;
+	list-style-type: disc;
 }
 
 /* News section styles */
