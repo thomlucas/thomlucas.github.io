@@ -234,12 +234,27 @@ margin-left: 30px;
 border-radius: 8px;
 }
 
+@media screen and (max-width: 1024px)
+{
 .descriptionArticle iframe{
-heigth: auto;
+display: block;
+margin-right: 30px;
+margin-bottom: 30px;
+border-radius: 8px;
+width: 100% ;
+align-content: center ;
+}
+}
+
+.descriptionArticle iframe{
 display: block;
 margin-right: 30px;
 border-radius: 8px;
+width: 560 px;
+height: 315 px;
+align-content: left ;
 }
+
 
 .descriptionArticle h1{
 	margin-left: 30px;
