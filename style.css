@@ -353,6 +353,15 @@ align-content: center ;
 	color: var(--text-color);
 }
 
+.descriptionArticle h4{
+	font-weight:bold;
+  font-style : normal;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin-bottom: 2px;
+	color: var(--text-color);
+}
+
 
 @media screen and (max-width: 1024px)
 {
