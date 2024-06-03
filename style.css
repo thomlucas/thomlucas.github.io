@@ -225,6 +225,35 @@ header {
 
 /* Presentation section styles*/
 
+
+.eveilGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;
+}
+
+@media screen and (max-width: 1024px)
+{
+.eveilGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;
+}
+}
+
+
+.eveilGrid img{
+display: block;
+margin-left: 0px;
+margin-right: 0px;
+border-radius: 8px;
+width: 100% ;
+height: 100% ;
+align-content: center;
+}
+
 .descriptionArticle{
 }
 
@@ -429,6 +458,16 @@ border-radius: 8px;
   font-weight:normal;
   font-style : italic;
   color: var(--hover-color2);
+}
+
+@media screen and (max-width: 1024px)
+{
+.wrapper{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;
+}
 }
 
 .wrapper{
