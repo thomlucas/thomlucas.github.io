@@ -1,23 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionnez toutes les images dans les containers
-    var images = document.querySelectorAll('.container img');
+    // Récupérer tous les éléments container
+    const containers = document.querySelectorAll('.container');
 
-    // Pour chaque image, ajoutez un gestionnaire d'événement de clic
-    images.forEach(function(img) {
-        img.addEventListener('click', function() {
-            // Récupérez l'id de l'image cliquée (par exemple, 'image-1' -> 'audio-1')
-            var imageId = this.id; // 'image-1', 'image-2', etc.
-            var audioId = 'audio-' + imageId.split('-')[1]; // 'audio-1', 'audio-2', etc.
+    // Fonction pour jouer l'audio et démarrer l'animation
+    function playAudioAndAnimate(image, audio) {
+        audio.currentTime = 0; // Réinitialiser la position de lecture à 0
+        audio.play();
+        
+        image.classList.remove('animate');
+        // Force reflow pour redémarrer l'animation
+        void image.offsetWidth;
+        image.classList.add('animate');
+        
+        // Écouter l'événement de fin de lecture pour arrêter l'animation
+        audio.addEventListener('ended', function() {
+            image.classList.remove('animate');
+        });
+    }
 
-            // Sélectionnez l'élément audio correspondant
-            var audio = document.getElementById(audioId);
-
-            // Vérifiez si l'audio est défini et prêt à être lu
+    // Attacher un gestionnaire d'événement à chaque image
+    containers.forEach(function(container) {
+        const image = container.querySelector('img');
+        const audioId = image.id.replace('image-', 'audio-'); // Dérive l'id de l'audio
+        
+        image.addEventListener('mousedown', function() {
+            const audio = document.getElementById(audioId);
             if (audio) {
-                // Réinitialisez l'audio pour le rejouer à partir du début
-                audio.currentTime = 0;
-                // Jouez le son
-                audio.play();
+                playAudioAndAnimate(image, audio);
             }
         });
     });
