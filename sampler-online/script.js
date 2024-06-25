@@ -14,19 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function isTouchDevice() {
+        return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+    }
+
     containers.forEach(function(container) {
         const image = container.querySelector('img');
         const audioId = image.id.replace('image-', 'audio-');
-        
+
         function handleInteraction() {
             const audio = document.getElementById(audioId);
             if (audio) {
                 playAudioAndAnimate(image, audio);
             }
         }
-        
-        // Support both mouse and touch interactions
-        image.addEventListener('mousedown', handleInteraction);
-        image.addEventListener('touchstart', handleInteraction);
+
+        if (isTouchDevice()) {
+            image.addEventListener('touchstart', handleInteraction);
+        } else {
+            image.addEventListener('mousedown', handleInteraction);
+        }
     });
 });
