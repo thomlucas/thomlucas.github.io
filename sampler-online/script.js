@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const lastInteractionTime = lastInteractionTimes[image.id] || 0;
 
             // Vérifier si l'interaction précédente a eu lieu il y a moins de 300 ms
-            if (now - lastInteractionTime < 300) {
+            if (now - lastInteractionTime < 100) {
                 return;
             }
 
